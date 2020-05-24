@@ -35,7 +35,8 @@ void Agregar(ConjuntoPersonas* conjunto, Persona* persona) {
 	
 bool Contiene(const ConjuntoPersonas* conjunto, const Persona* persona) {
     int i = 0;
-    while (conjunto->personas[i]->id != persona->id)
+    int idPersona = ObtenerId(persona);
+    while (ObtenerId(conjunto->personas[i]) != idPersona)
     {
         i++;
     }
